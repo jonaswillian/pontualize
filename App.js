@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Lista from './telas/Lista';
+import Login from './telas/Login';
+import Principal from './telas/Principal';
+import Suporte from './telas/Suporte';
+import Marcar from './telas/Marcar';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+function ListaTelas() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name="Login" component={Login} options={{
+        headerShown:false
+      }} />
+      <Stack.Screen name="Principal" component={Principal} />
+      <Stack.Screen name="Lista" component={Lista} />
+      <Stack.Screen name="Suporte" component={Suporte} />
+      <Stack.Screen name="Marcar" component={Marcar} />
+    </Stack.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  return (
+    <NavigationContainer>
+      <ListaTelas />
+    </NavigationContainer>
+  );
+}
