@@ -11,14 +11,20 @@ const Stack = createStackNavigator();
 
 function ListaTelas() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName='Lista'>
       <Stack.Screen name="Login" component={Login} options={{
         headerShown:false
       }} />
       <Stack.Screen name="Principal" component={Principal} />
-      <Stack.Screen name="Lista" component={Lista} />
+      <Stack.Screen name="Lista" component={Lista} options={{
+        headerTitle: "Registro de Marcações",
+        headerTintColor:'#40c188',
+      }} />
       <Stack.Screen name="Suporte" component={Suporte} />
-      <Stack.Screen name="Marcar" component={Marcar} />
+      <Stack.Screen name="Marcar" component={Marcar} options={{
+        headerTitle:'Marcação de Ponto',
+        headerTintColor:'#40c188'
+      }} />
     </Stack.Navigator>
   );
 }

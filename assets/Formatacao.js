@@ -3,11 +3,8 @@ import { StyleSheet } from "react-native";
 export const estilo = StyleSheet.create({
     tela:{
         backgroundColor:'#fff',
-        borderStyle:"dotted",
-        borderColor:'#40c188',
-        borderWidth:20,
         flex:1,
-        padding:50
+        padding:30
     },
     logotipo:{
         width:280,
@@ -19,9 +16,41 @@ export const estilo = StyleSheet.create({
     },
     slogan:{
         position:"absolute",
-        top:'57%',
+        top:'48%',
         left:'24%',
         fontSize:22,
+        fontWeight:'bold',
+        color:'#459dd9'
+    },
+    form_login:{
+        position:"relative",
+        marginTop:450
+    },
+    campo_login:{
+        marginBottom:30,
+        padding:15,
+        backgroundColor:"#f1f1f1",
+        height:55
+    },
+    hora_atual:{
+        fontSize:100,
+        position:'relative',
         fontWeight:'bold'
+    },
+    botao_ponto:{
+        backgroundColor:'#40c188',
+        padding:20,
+        width:300,
+        marginTop:50
+    },
+    texto_botao_ponto:{
+        textAlign:'center',
+        color:'#fff',
+        fontWeight:'bold',
+        fontSize:20
+    },
+    info_ponto:{
+        marginTop:20,
+        alignItems:'center'
     }
 })
