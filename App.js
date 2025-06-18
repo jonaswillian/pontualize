@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 
 function ListaTelas() {
   return (
-    <Stack.Navigator initialRouteName='Lista'>
+    <Stack.Navigator initialRouteName='Suporte'>
       <Stack.Screen name="Login" component={Login} options={{
         headerShown:false
       }} />
@@ -20,7 +20,10 @@ function ListaTelas() {
         headerTitle: "Registro de Marcações",
         headerTintColor:'#40c188',
       }} />
-      <Stack.Screen name="Suporte" component={Suporte} />
+      <Stack.Screen name="Suporte" component={Suporte} options={{
+        headerTitle: "Suporte e Ajuda",
+        headerTintColor:'#40c188',
+      }}/>
       <Stack.Screen name="Marcar" component={Marcar} options={{
         headerTitle:'Marcação de Ponto',
         headerTintColor:'#40c188'
