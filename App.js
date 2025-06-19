@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 
 function ListaTelas() {
   return (
-    <Stack.Navigator initialRouteName='Suporte'>
+    <Stack.Navigator initialRouteName='Marcar'>
       <Stack.Screen name="Login" component={Login} options={{
         headerShown:false
       }} />
