@@ -7,11 +7,13 @@ import Principal from './telas/Principal';
 import Suporte from './telas/Suporte';
 import Marcar from './telas/Marcar';
 
+
+
 const Stack = createStackNavigator();
 
 function ListaTelas() {
   return (
-    <Stack.Navigator initialRouteName='Marcar'>
+    <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen name="Login" component={Login} options={{
         headerShown:false
       }} />
