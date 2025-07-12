@@ -41,14 +41,16 @@ export default function Marcar({route}){
     }
 
     function BaterPonto(){
-        const data_atual = new Date.prototype.toISOString()
+        const agora2 = new Date()
+        agora2.setHours(agora2.getUTCHours() - 3)
+        const dataHoraISO = agora2.toISOString()
         return axios({
             method: "POST",
             type: "json",
             url: "http://10.55.49.38:3000/marcacao/cadastrar",
             data:{
-                    "data": "2021-08-16T16:31:53.596Z",
-                    "hora": "2021-08-16T16:31:53.596Z",
+                    "data": dataHoraISO,
+                    "hora": dataHoraISO,
                     "latitude": 0.5646545646,
                     "longitude": 0.876131688,
                     "funcionarioId": funcionario.funcionario
